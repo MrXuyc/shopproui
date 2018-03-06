@@ -1,0 +1,100 @@
+/*
+* @Author: Administrator
+* @Date:   2018-03-06 10:38:29
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-03-06 11:37:26
+默认css去除
+*/
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f6f6f6;
+    /*默认字体，行间距1.5倍*/
+    font: 12px/1.5 tahoma, arial , Microsoft YaHei,sans-serif;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+}
+label{
+    cursor: pointer;
+}
+input[type='checkbox']{
+    cursor: pointer;
+}
+
+/* 定宽布局 */
+.w{
+    width: 1080px;
+    margin: 0 auto;
+    /*如果需要绝对定位，以它为基准相对定位*/
+    position: relative;
+    /*超出边界不显示 清除浮动*/
+    overflow: hidden;
+
+}
+.large .w{
+    width:1600px;
+}
+/*全局通用样式*/
+/*隐藏*/
+.hide{
+    display: none;
+}
+/*超链*/
+.link{
+    color: #999;
+    /*手图标*/
+    cursor: pointer;
+    /*去除下划线*/
+    text-decoration: none;
+}
+.link:hover{
+    color: #e80012;
+}
+.link-text{
+    color: #999;
+    text-decoration: none;
+}
+/*按钮*/
+.btn{
+    display: inline-block;
+    /*如果ie上inline-block不生效的话*/
+    padding: 0 20px;
+    /*height和line-height能让文字居中*/
+    height: 40px;
+    line-height: 40px;
+    /*防止其他样式冲突*/
+    vertical-align: middle;
+    border: none;
+    background: #c60023;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-mini{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+/*loading*/
+.loading{
+    margin: 10px auto;
+    display: none;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: url(../../image/icon/loading.gif) no-repeat;
+    opacity: .6;
+}

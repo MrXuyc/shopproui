@@ -7,11 +7,12 @@ var WEBPACK_ENV =process.env.WEBPACK_ENV || 'dev';
 
 
 //获取html-webpack-plugin参数的方法
-var getHtmlConfig=function(name){
+var getHtmlConfig=function(name,title){
     return {
         template:'./src/view/'+name+'.html',
         filename:'view/'+name+'.html',
         inject:true,
+        title:title ,
         hash:true,
         chunks:['common',name]
     }
@@ -19,9 +20,10 @@ var getHtmlConfig=function(name){
 //webpack config
 var config={
     entry:{
-        'index':['./src/page/index/index.js'],
-        'login':['./src/page/login/login.js'],
-        'common':['./src/page/common/common.js']
+        'index': ['./src/page/index/index.js'],
+        'login': ['./src/page/login/login.js'],
+        'common':['./src/page/common/index.js'],
+        'result':['./src/page/result/index.js']
     },
     output:{
         //生成路径
@@ -44,15 +46,27 @@ var config={
         //css单独打包
         new ExtractTextPlugin("css/[name].css"),
         //html模板处理
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login')),
+        new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
     ],
     //该形式讲css放在js中进行加载
     module:{
         loaders:[
         { test:/\.css$/, loader:ExtractTextPlugin.extract("style-loader","css-loader")},
         { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
+        { test:/\.string$/, loader:'html-loader'},
         ]
+    },
+    resolve:{
+        alias:{
+            //__dirname标识根目录
+            util:__dirname+'/src/util',
+            page:__dirname+'/src/page',
+            service:__dirname+'/src/service',
+            image:__dirname+'/src/image',
+            node_modules:__dirname+'/node_modules',
+        }
     }
 };
 if('dev' === WEBPACK_ENV){
