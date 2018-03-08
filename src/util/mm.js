@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-01-11 17:08:53
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-06 13:01:13
+* @Last Modified time: 2018-03-07 09:40:42
 */
 'use strict';
 var Hogan = require('hogan.js');
@@ -85,7 +85,7 @@ var _mm={
     },
     //统一登录处理
     doLogin:function(){
-        window.location.href='./login.html?redirect='+encodeURIComponent(window.location.href);
+        window.location.href='./user-login.html?redirect='+encodeURIComponent(window.location.href);
     },
     goHome:function(){
         window.location.href='./index.html';  

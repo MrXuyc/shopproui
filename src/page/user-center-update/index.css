@@ -1,0 +1,25 @@
+/*
+* @Author: Administrator
+* @Date:   2018-03-07 16:36:51
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-03-08 09:33:49
+*/
+.form-line{
+    margin-bottom: 10px; 
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+
+}
+/*input不能继承父的大小的*/
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    width: 200px;
+    font-size: 14px;
+}

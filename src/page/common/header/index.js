@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-06 15:09:16
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-06 16:08:14
+* @Last Modified time: 2018-03-07 16:47:17
 */
 'use strict';
 require('./index.css');
@@ -22,7 +22,7 @@ var header={
         }
     },
     bindEvent:function(){
-        console.info(1111);
+
         var _this = this;
         //搜索按钮点击
         $('#search-btn').click(function(){

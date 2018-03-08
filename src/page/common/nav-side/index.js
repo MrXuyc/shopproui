@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-06 16:17:37
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-06 17:18:57
+* @Last Modified time: 2018-03-08 10:38:50
 */
 'use strict'
 require('./index.css');
@@ -16,7 +16,7 @@ var nav={
         navList:[
             {name:'user-center',desc:'个人中心',href:'./user-center.html'},
             {name:'order-list',desc:'我的订单',href:'./order-list.html'},
-            {name:'pass-update',desc:'修改密码',href:'./pass-update.html'},
+            {name:'user-pass-update',desc:'修改密码',href:'./user-pass-update.html'},
             {name:'about',desc:'关于MMall',href:'./about.html'}
         ]
     },

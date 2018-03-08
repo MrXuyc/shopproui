@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-06 10:38:29
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-06 11:37:26
+* @Last Modified time: 2018-03-07 17:17:01
 默认css去除
 */
 /* css reset */
@@ -38,6 +38,23 @@ input[type='checkbox']{
     /*超出边界不显示 清除浮动*/
     overflow: hidden;
 
+}
+/*panel*/
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
 }
 .large .w{
     width:1600px;
@@ -90,7 +107,6 @@ input[type='checkbox']{
 /*loading*/
 .loading{
     margin: 10px auto;
-    display: none;
     width: 65px;
     height: 65px;
     border: 1px solid #ddd;
