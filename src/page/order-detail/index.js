@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-19 09:29:52
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-19 10:52:18
+* @Last Modified time: 2018-03-19 11:25:35
 */
 'use strict';
 require('./index.css');
@@ -18,7 +18,7 @@ var page={
         orderNumber:_mm.getUrlParam('orderNumber')
     },
     init:function(){
-        // this.onLoad();
+        this.onLoad();
         this.bindEvent();
     },
     onLoad:function(){
@@ -26,7 +26,7 @@ var page={
         navSide.init({
             name:'order-list'
         });
-        this.loadOrderDetail
+        this.loadOrderDetail();
     },
     bindEvent:function(){
         var _this=this;
